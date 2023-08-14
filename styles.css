@@ -1,0 +1,30 @@
+body {
+    background-image: url(./assets/fauzan-coffee-shop.gif);
+    background-repeat: no-repeat;
+    background-size: 100vw, 100vh;
+}
+
+@media (max-aspect-ratio: 4/2) {
+    body {
+        background-size: 200vmax, auto;
+        background-position: (0%, 10%);
+    }
+}
+
+flex {
+    display: flex;
+}
+
+flexRow {
+    flex-direction: row;
+}
+
+flexColumn {
+    flex-direction: column;
+}
+
+
+mainContainer {
+    
+
+}
