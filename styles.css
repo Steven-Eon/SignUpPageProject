@@ -1,30 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+    font-family: 'Inter', Arial, Helvetica, sans-serif
+}
+
 body {
-    background-image: url(./assets/fauzan-coffee-shop.gif);
-    background-repeat: no-repeat;
-    background-size: 100vw, 100vh;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    --device-large-side: row;
+    --device-short-side: column;
 }
 
 @media (max-aspect-ratio: 4/2) {
     body {
-        background-size: 200vmax, auto;
-        background-position: (0%, 10%);
+        --device-large-side: column;
+        --device-short-side: row;
     }
 }
 
-flex {
+.flex {
     display: flex;
 }
 
-flexRow {
+.flexRow {
     flex-direction: row;
 }
 
-flexColumn {
+.flexColumn {
     flex-direction: column;
 }
 
-
-mainContainer {
-    
-
+.mainContainer {
+    justify-content: space-between;
+    width: 100vw;
+    background-color: #00000000;
+    min-height: 100vh;
 }
+
+.darkContainer {
+    width: 60%;
+    background-color: #291e1f;
+}
+
+.lightContainer {
+    background-image: url(./assets/andrei-stan-9NANyyCys2o-unsplash.jpg);
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+.displayBar {
+   
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: clamp(0.5rem, 2vw, 3rem);
+    text-align: center;
+    width: 100%;
+    background-color: #5f595a34;
+}
+
+.displayBar > img {
+    width: 15%;
+}
+
+.lightContainer > * {
+    position: relative;
+    bottom: 20%;
+}
+
+/* Photo by <a href="https://unsplash.com/@reythh?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andrei Stan</a> on <a href="https://unsplash.com/photos/a-row-of-tall-buildings-sitting-next-to-each-other-9NANyyCys2o?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  */
