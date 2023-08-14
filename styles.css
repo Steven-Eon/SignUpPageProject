@@ -40,29 +40,33 @@ body {
 
 .darkContainer {
     width: 60%;
-    background-color: #291e1f;
+    background-color: #53272c;
+
 }
 
 .lightContainer {
     background-image: url(./assets/andrei-stan-9NANyyCys2o-unsplash.jpg);
     background-size: cover;
+    background-position: 50% 50%;
     align-items: center;
     justify-content: center;
     width: 40%;
 }
 
 .displayBar {
-   
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: clamp(0.5rem, 2vw, 3rem);
+    font-size: clamp(0.5rem, 3vw, 3rem);
+    font-weight: bolder;
     text-align: center;
     width: 100%;
     background-color: #5f595a34;
 }
 
 .displayBar > img {
+    position: relative;
+    right: 1.5vw;
     width: 15%;
 }
 
