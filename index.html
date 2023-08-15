@@ -18,9 +18,9 @@
             <button type="button">Placeholder for Light Toggle</button>
             <p>Placeholder Text</p>
             <div class="signUpForm flex flexColumn">
-                <form action="http://127.0.0.1:3000/index.html" method="post">
+                <form action="http://127.0.0.1:3000/" method="post">
                     <fieldset>
-                        <div class="flex flexRow">
+                        <div class="flex inputSections">
                             <div class="flex flexColumn">
                                 <label for="firstName">First Name</label>
                                 <input name="firstName" id="firstName" type="text">
@@ -32,15 +32,30 @@
                         </div>
                     </fieldset>
                     <fieldset>
-                        <input type="text">
-                        
-                        <input type="text">
+                        <div class="flex inputSections">
+                            <div class="flex flexColumn">
+                                <label for="email">Email</label>
+                                <input name="email" id="email" type="text">
+                            </div>
+                            <div class="flex flexColumn">
+                                <label for="phoneNumber">Phone Number</label>
+                                <input id="phoneNumber" name="phoneNumber" type="text">
+                            </div>
+                        </div>
                     </fieldset>
                     <fieldset>
-                        <input type="text">
-                        
-                        <input type="text">
+                        <div class="flex inputSections">
+                            <div class="flex flexColumn">
+                                <label for="password">Password</label>
+                                <input id="password" name="password" type="password">
+                            </div>
+                            <div class="flex flexColumn">
+                                <label for="confirmPassword">Confirm Password</label>
+                                <input id="confirmPassword" name="confirmPassword" type="password">
+                            </div>
+                        </div>
                     </fieldset>
+                    <button type="submit">Click To Sign Up!</button>
                 </form>
             </div>
         </div>

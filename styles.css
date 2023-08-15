@@ -12,7 +12,7 @@ body {
     --device-short-side: column;
 }
 
-@media (max-aspect-ratio: 4/2) {
+@media (max-aspect-ratio: 3/2) {
     body {
         --device-large-side: column;
         --device-short-side: row;
@@ -75,5 +75,8 @@ body {
     bottom: 20%;
 }
 
+.inputSections {
+    flex-direction: var(--device-large-side);
+}
 /* Photo by <a href="https://unsplash.com/@reythh?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andrei Stan</a> on <a href="https://unsplash.com/photos/a-row-of-tall-buildings-sitting-next-to-each-other-9NANyyCys2o?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   */
