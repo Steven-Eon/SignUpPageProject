@@ -1,35 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-html {
-    font-family: 'Inter', Arial, Helvetica, sans-serif
-}
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 
 :root {
+    --main-flex-direction: row;
+    --alt-flex-direction: column;
+}
 
+:root.dark {
+    --background-color-mode: black;
+    --main-contrast-shade: #0f0f0f;
+    --contrast-color-mode: white;
+    --contrast-contrast-shade: #9c9c9c;
+}
+
+:root.light {
+    --background-color-mode: white;
+    --main-contrast-shade: #f7f7f7;
+    --contrast-color-mode: black;
+    --contrast-contrast-shade: #9c9c9c;
+}
+
+.splashImage {
+    background-image: url("./assets/andrei-stan-9NANyyCys2o-unsplash.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 40%;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+@media (max-aspect-ratio: 1/1)
+{
+    :root {
+        --main-flex-direction: column;
+        --alt-flex-direction: row;
+    }
+
+    .splashImage {
+        background-image: url("./assets/andrei-stan-9NANyyCys2o-unsplash.jpg");
+        width: 100%;
+        min-height: 40vh;
+        background-position: 50% 25%;
+    }
+
+    .entryBox {
+        justify-content: center;
+        align-items: center;
+        margin: 0px !important;
+    }
+
+    form > button[type="submit"]{
+        position: relative;
+        margin: 0;
+        margin-block: 5%;
+        left: 50%;
+        translate: -50%;
+    }
+
+    form p {
+        text-align: center;
+    }
+
+    button.themeToggle {
+        top: 42.5vh;
+        right: 2.5vw;
+    }
 }
 
 body {
+    overflow-x: hidden;
     font-size: 16px;
+    font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
+    color: var(--contrast-color-mode);
     margin: 0;
     padding: 0;
-    --device-large-side: row;
-    --device-short-side: column;
-}
-
-@media (max-aspect-ratio: 1/1) {
-    body {
-        --device-large-side: column;
-        --device-short-side: row;
-    }
-
-    .inputSections {
-        justify-content: center;
-        align-items: center;
-    }
-
-    .inputSections > div > input {
-        width: 40vw !important;
-    }
+    border: 0;
 }
 
 .flex {
@@ -45,82 +89,119 @@ body {
 }
 
 .center {
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
 .mainContainer {
-    justify-content: space-between;
-    width: 100vw;
-    background-color: #00000000;
+    flex-direction: var(--main-flex-direction);
     min-height: 100vh;
+    width: 100vw;
 }
 
-.darkContainer {
-    width: 60%;
-    background-color: #53272c;
-
+footer {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    background-color: var(--background-color-mode);
 }
 
-.lightContainer {
-    background-image: url(./assets/andrei-stan-9NANyyCys2o-unsplash.jpg);
-    background-size: cover;
-    background-position: 50% 50%;
-    align-items: center;
-    justify-content: center;
-    width: 40%;
+.signupArea {
+    background-color: var(--background-color-mode);
+    flex: 1;
+    font-size: 0.75rem;
 }
 
-.displayBar {
-    justify-content: center;
-    align-items: center;
+.textBar {
+    font-size: 1.25rem;
     color: white;
-    font-size: clamp(0.5rem, 3vw, 3rem);
-    font-weight: bolder;
-    text-align: center;
+    position: relative;
+    top: 15vmin;
     width: 100%;
-    background-color: #5f595a34;
+    min-height: 10vh;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
-.displayBar > img {
-    position: relative;
-    right: 1.5vw;
-    width: 15%;
+.textBar img {
+    margin-right: 2.5%;
+    width: 50px;
 }
 
-.lightContainer > * {
-    position: relative;
-    bottom: 20%;
+
+.entryText {
+    margin-top: 10%;
+    max-width: 90%;
+    margin-left: 5%;
+    margin-bottom: 5%;
 }
 
-.signUpForm > form > fieldset {
+.headerText {
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+fieldset {
+    background-color: var(--main-contrast-shade);
+    padding: 0;
     margin: 0;
     border: 0;
-    background-color: white;
-    box-shadow: 0.2rem 0.1rem 2px black;
-} 
-
-
-
-.inputSections {
-    flex-direction: var(--device-large-side);
 }
 
-.inputSections > div > input {
-    width: 20vw;
-    margin-right: 3rem;
-    border-radius: 0.3rem;
-    border-width: 0.1rem;
-    padding: 0.2rem;
-    border-color: #9c9c9c;
-    border-style: solid;
+.entryBox {
+    flex-direction: var(--main-flex-direction);
 }
 
-.referral
-{
+.entryBox > div {
+    max-width: 50%;
+    margin: 2% 5%;
+}
+
+form > button {
+    margin: 5% 5%;
+    color: var(--background-color-mode);
+    background-color: var(--contrast-color-mode);
+    border-radius: 10px;
+    border-color: transparent;
+    padding-inline: 5%;
+    padding-block: 1%;
+}
+
+form > button:hover {
+    background: var(--contrast-contrast-shade);
+    cursor: pointer;
+}
+
+form p {
+    margin-inline: 5%;
+}
+
+form > .entryBox:last-of-type{
+    padding-bottom: 2vh;
+}
+
+.themeToggle {
+    color: var(--contrast-color-mode);
     position: absolute;
-    bottom: 1%;
-    font-size: clamp(0.5rem, 1vw, 3rem)
+    right: 2%;
+    top: 2%;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
 }
-/* 
-  */
+
+.themeToggle:hover {
+    cursor: pointer;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid transparent;
+    background-color: #ffcfd5;
+}
+
+.photoCredits {
+    font-size: 0.5rem;
+    margin: 0;
+    text-align: center;
+}

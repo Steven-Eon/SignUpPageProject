@@ -3,65 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
     <title>Document</title>
 </head>
 <body>
-    <div class="mainContainer flex flexRow">
-        <div class="lightContainer flex flexColumn">
-            <div class="displayBar flex flexRow">
-                <img src="assets/odin-lined.png">
-                <p>Welcome</p>
+    <button class="themeToggle" type="button">
+        <i class='bx bx-sun'></i>
+    </button>
+    <div class="flex mainContainer">
+        <div class="flex flexColumn splashImage">
+            <div class="flex flexRow textBar center">
+                <img src="./assets/odin-lined.png" />
+                <p>Welcome!</p>
             </div>
-            <div class="flex flexRow center referral">
+            <div class="photoCredits">
                 <p>Photo by <a href="https://unsplash.com/@reythh?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andrei Stan</a> on <a href="https://unsplash.com/photos/a-row-of-tall-buildings-sitting-next-to-each-other-9NANyyCys2o?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
             </div>
         </div>
-        <div class="darkContainer flex flexColumn">
-            <button type="button">Placeholder for Light Toggle</button>
-            <p>Placeholder Text</p>
-            <div class="signUpForm flex flexColumn">
-                <form action="http://127.0.0.1:3000/" method="post">
+        <div class="signupArea flex flexColumn">
+            <div class="entryText">
+                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. <br>Sign up now to get started.</br></p>
+                <p>You know you want to.</p>
+            </div>
+            <div>
+                <form action="" method="post">
                     <fieldset>
-                        <div>
-                            <p>Let's Get Started!</p>
+                        <p class="headerText">Let's get started!</p>
+                    </fieldset>
+                    <fieldset class="flex entryBox">
+                        <div class="flex flexColumn">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required>
                         </div>
-                        <div class="flex inputSections">
-                            <div class="flex flexColumn">
-                                <label for="firstName">First Name</label>
-                                <input name="firstName" id="firstName" type="text">
-                            </div>
-                            <div class="flex flexColumn">
-                                <label for="lastName">Last Name</label>
-                                <input id="lastName" name="lastName" type="text">
-                            </div>
+                        <div class="flex flexColumn">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required>
                         </div>
                     </fieldset>
-                    <fieldset>
-                        <div class="flex inputSections">
-                            <div class="flex flexColumn">
-                                <label for="email">Email</label>
-                                <input name="email" id="email" type="text">
-                            </div>
-                            <div class="flex flexColumn">
-                                <label for="phoneNumber">Phone Number</label>
-                                <input id="phoneNumber" name="phoneNumber" type="text">
-                            </div>
+                    <fieldset class="flex entryBox">
+                        <div class="flex flexColumn">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="flex flexColumn">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="number" id="phoneNumber" minlength="10" maxlength="10" required>
                         </div>
                     </fieldset>
-                    <fieldset>
-                        <div class="flex inputSections">
-                            <div class="flex flexColumn">
-                                <label for="password">Password</label>
-                                <input id="password" name="password" type="password">
-                            </div>
-                            <div class="flex flexColumn">
-                                <label for="confirmPassword">Confirm Password</label>
-                                <input id="confirmPassword" name="confirmPassword" type="password">
-                            </div>
+                    <fieldset class="flex entryBox">
+                        <div class="flex flexColumn">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <div class="flex flexColumn">
+                            <label for="passwordConf">Confirm Password</label>
+                            <input type="password" id="passwordConf" name="passwordConf" required>
                         </div>
                     </fieldset>
-                    <button type="submit">Click To Sign Up!</button>
+                    <button type="submit">Create Account</button>
+                    <p>Already have an account? <a href="">Log in</a></p>
                 </form>
             </div>
         </div>
