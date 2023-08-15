@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 
 :root {
-    font-size: 16px;
-    font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
     --main-flex-direction: row;
     --alt-flex-direction: column;
+    --background-color-mode: black;
+    --contrast-color-mode: white;
+}
+
+:root:dark {
     --background-color-mode: black;
     --contrast-color-mode: white;
 }
@@ -52,6 +55,9 @@
 }
 
 body {
+    overflow-x: hidden;
+    font-size: 16px;
+    font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
     color: var(--contrast-color-mode);
     margin: 0;
     padding: 0;
@@ -106,6 +112,7 @@ body {
 }
 
 .entryText {
+    margin-top: 10%;
     max-width: 90%;
     margin-left: 5%
 }
@@ -133,4 +140,10 @@ form > button {
     border-color: transparent;
     padding-inline: 5%;
     padding-block: 1%;
+}
+
+.themeToggle {
+    position: absolute;
+    right: 2%;
+    top: 2%
 }
