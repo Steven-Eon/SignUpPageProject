@@ -3,17 +3,17 @@
 :root {
     --main-flex-direction: row;
     --alt-flex-direction: column;
+}
+
+:root.dark {
     --background-color-mode: black;
+    --main-contrast-shade: #0f0f0f;
     --contrast-color-mode: white;
 }
 
-:root:dark {
-    --background-color-mode: black;
-    --contrast-color-mode: white;
-}
-
-:root:light {
+:root.light {
     --background-color-mode: white;
+    --main-contrast-shade: #f7f7f7;
     --contrast-color-mode: black;
 }
 
@@ -51,6 +51,10 @@
         margin-block: 5%;
         left: 50%;
         translate: -50%;
+    }
+    button.themeToggle {
+        top: 42.5vh;
+        right: 2.5vw;
     }
 }
 
@@ -118,6 +122,7 @@ body {
 }
 
 fieldset {
+    background-color: var(--main-contrast-shade);
     padding: 0;
     margin: 0;
     border: 0;
@@ -143,7 +148,15 @@ form > button {
 }
 
 .themeToggle {
+    color: var(--contrast-color-mode);
     position: absolute;
     right: 2%;
-    top: 2%
+    top: 2%;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.themeToggle:hover {
+    cursor: pointer;
 }
