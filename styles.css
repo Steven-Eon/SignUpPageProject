@@ -40,7 +40,14 @@
         justify-content: center;
         align-items: center;
         margin: 0px !important;
+    }
 
+    form > button[type="submit"] {
+        position: relative;
+        margin: 0;
+        margin-block: 5%;
+        left: 50%;
+        translate: -50%;
     }
 }
 
@@ -116,4 +123,14 @@ fieldset {
 .entryBox > div {
     max-width: 40%;
     margin: 2% 5%;
+}
+
+form > button {
+    margin: 5% 5%;
+    color: var(--background-color-mode);
+    background-color: var(--contrast-color-mode);
+    border-radius: 10px;
+    border-color: transparent;
+    padding-inline: 5%;
+    padding-block: 1%;
 }
