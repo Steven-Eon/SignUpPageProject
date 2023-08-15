@@ -9,12 +9,14 @@
     --background-color-mode: black;
     --main-contrast-shade: #0f0f0f;
     --contrast-color-mode: white;
+    --contrast-contrast-shade: #9c9c9c;
 }
 
 :root.light {
     --background-color-mode: white;
     --main-contrast-shade: #f7f7f7;
     --contrast-color-mode: black;
+    --contrast-contrast-shade: #9c9c9c;
 }
 
 .splashImage {
@@ -23,6 +25,7 @@
     background-position: 50% 50%;
     width: 40%;
     min-height: 100vh;
+    justify-content: space-between;
 }
 
 @media (max-aspect-ratio: 1/1)
@@ -53,8 +56,7 @@
         translate: -50%;
     }
 
-    form p
-    {
+    form p {
         text-align: center;
     }
 
@@ -97,9 +99,18 @@ body {
     width: 100vw;
 }
 
+footer {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    background-color: var(--background-color-mode);
+}
+
 .signupArea {
     background-color: var(--background-color-mode);
     flex: 1;
+    font-size: 0.75rem;
 }
 
 .textBar {
@@ -117,9 +128,6 @@ body {
     width: 50px;
 }
 
-.signupArea {
-    font-size: 0.75rem;
-}
 
 .entryText {
     margin-top: 10%;
@@ -159,6 +167,11 @@ form > button {
     padding-block: 1%;
 }
 
+form > button:hover {
+    background: var(--contrast-contrast-shade);
+    cursor: pointer;
+}
+
 form p {
     margin-inline: 5%;
 }
@@ -181,3 +194,14 @@ form > .entryBox:last-of-type{
     cursor: pointer;
 }
 
+input:focus {
+    outline: none;
+    border: 2px solid transparent;
+    background-color: #ffcfd5;
+}
+
+.photoCredits {
+    font-size: 0.5rem;
+    margin: 0;
+    text-align: center;
+}
