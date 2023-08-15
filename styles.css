@@ -4,6 +4,10 @@ html {
     font-family: 'Inter', Arial, Helvetica, sans-serif
 }
 
+:root {
+
+}
+
 body {
     font-size: 16px;
     margin: 0;
@@ -12,10 +16,19 @@ body {
     --device-short-side: column;
 }
 
-@media (max-aspect-ratio: 3/2) {
+@media (max-aspect-ratio: 1/1) {
     body {
         --device-large-side: column;
         --device-short-side: row;
+    }
+
+    .inputSections {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inputSections > div > input {
+        width: 40vw !important;
     }
 }
 
@@ -29,6 +42,11 @@ body {
 
 .flexColumn {
     flex-direction: column;
+}
+
+.center {
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .mainContainer {
@@ -75,8 +93,34 @@ body {
     bottom: 20%;
 }
 
+.signUpForm > form > fieldset {
+    margin: 0;
+    border: 0;
+    background-color: white;
+    box-shadow: 0.2rem 0.1rem 2px black;
+} 
+
+
+
 .inputSections {
     flex-direction: var(--device-large-side);
 }
-/* Photo by <a href="https://unsplash.com/@reythh?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andrei Stan</a> on <a href="https://unsplash.com/photos/a-row-of-tall-buildings-sitting-next-to-each-other-9NANyyCys2o?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+.inputSections > div > input {
+    width: 20vw;
+    margin-right: 3rem;
+    border-radius: 0.3rem;
+    border-width: 0.1rem;
+    padding: 0.2rem;
+    border-color: #9c9c9c;
+    border-style: solid;
+}
+
+.referral
+{
+    position: absolute;
+    bottom: 1%;
+    font-size: clamp(0.5rem, 1vw, 3rem)
+}
+/* 
   */
