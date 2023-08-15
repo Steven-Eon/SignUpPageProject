@@ -3,66 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
     <title>Document</title>
 </head>
 <body>
-    <div class="mainContainer flex flexRow">
-        <div class="lightContainer flex flexColumn">
-            <div class="displayBar flex flexRow">
-                <img src="assets/odin-lined.png">
-                <p>Welcome</p>
-            </div>
-            <div class="flex flexRow center referral">
-                <p>Photo by <a href="https://unsplash.com/@reythh?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andrei Stan</a> on <a href="https://unsplash.com/photos/a-row-of-tall-buildings-sitting-next-to-each-other-9NANyyCys2o?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+    <div class="flex mainContainer">
+        <div class="splashImage">
+            <div class="flex flexRow textBar center">
+                <img src="./assets/odin-lined.png" />
+                <p>Welcome!</p>
             </div>
         </div>
-        <div class="darkContainer flex flexColumn">
-            <button type="button">Placeholder for Light Toggle</button>
-            <p>Placeholder Text</p>
-            <div class="signUpForm flex flexColumn">
-                <form action="http://127.0.0.1:3000/" method="post">
-                    <fieldset>
-                        <div>
-                            <p>Let's Get Started!</p>
-                        </div>
-                        <div class="flex inputSections">
-                            <div class="flex flexColumn">
-                                <label for="firstName">First Name</label>
-                                <input name="firstName" id="firstName" type="text">
-                            </div>
-                            <div class="flex flexColumn">
-                                <label for="lastName">Last Name</label>
-                                <input id="lastName" name="lastName" type="text">
-                            </div>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <div class="flex inputSections">
-                            <div class="flex flexColumn">
-                                <label for="email">Email</label>
-                                <input name="email" id="email" type="text">
-                            </div>
-                            <div class="flex flexColumn">
-                                <label for="phoneNumber">Phone Number</label>
-                                <input id="phoneNumber" name="phoneNumber" type="text">
-                            </div>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <div class="flex inputSections">
-                            <div class="flex flexColumn">
-                                <label for="password">Password</label>
-                                <input id="password" name="password" type="password">
-                            </div>
-                            <div class="flex flexColumn">
-                                <label for="confirmPassword">Confirm Password</label>
-                                <input id="confirmPassword" name="confirmPassword" type="password">
-                            </div>
-                        </div>
-                    </fieldset>
-                    <button type="submit">Click To Sign Up!</button>
-                </form>
+        <div class="signupArea flex flexColumn">
+            <div class="entryText">
+                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. <br>Sign up now to get started.</br></p>
+                <p>You know you want to.</p>
             </div>
         </div>
     </div>
