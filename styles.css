@@ -45,13 +45,19 @@
         margin: 0px !important;
     }
 
-    form > button[type="submit"] {
+    form > button[type="submit"]{
         position: relative;
         margin: 0;
         margin-block: 5%;
         left: 50%;
         translate: -50%;
     }
+
+    form p
+    {
+        text-align: center;
+    }
+
     button.themeToggle {
         top: 42.5vh;
         right: 2.5vw;
@@ -118,7 +124,13 @@ body {
 .entryText {
     margin-top: 10%;
     max-width: 90%;
-    margin-left: 5%
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
+.headerText {
+    font-weight: bolder;
+    font-size: 1rem;
 }
 
 fieldset {
@@ -133,7 +145,7 @@ fieldset {
 }
 
 .entryBox > div {
-    max-width: 40%;
+    max-width: 50%;
     margin: 2% 5%;
 }
 
@@ -145,6 +157,14 @@ form > button {
     border-color: transparent;
     padding-inline: 5%;
     padding-block: 1%;
+}
+
+form p {
+    margin-inline: 5%;
+}
+
+form > .entryBox:last-of-type{
+    padding-bottom: 2vh;
 }
 
 .themeToggle {
@@ -160,3 +180,4 @@ form > button {
 .themeToggle:hover {
     cursor: pointer;
 }
+
