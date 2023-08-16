@@ -28,7 +28,7 @@
     justify-content: space-between;
 }
 
-@media (max-aspect-ratio: 1/1)
+@media (max-aspect-ratio: 4/3)
 {
     :root {
         --main-flex-direction: column;
@@ -68,7 +68,6 @@
 
 body {
     overflow-x: hidden;
-    font-size: 16px;
     font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif;
     color: var(--contrast-color-mode);
     margin: 0;
@@ -110,11 +109,11 @@ footer {
 .signupArea {
     background-color: var(--background-color-mode);
     flex: 1;
-    font-size: 0.75rem;
+    font-size: 1.25rem;
 }
 
 .textBar {
-    font-size: 1.25rem;
+    font-size: 2rem;
     color: white;
     position: relative;
     top: 15vmin;
@@ -138,7 +137,7 @@ footer {
 
 .headerText {
     font-weight: bolder;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 fieldset {
