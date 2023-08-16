@@ -140,11 +140,15 @@ footer {
     font-size: 1.5rem;
 }
 
-fieldset {
+fieldset {   
     background-color: var(--main-contrast-shade);
     padding: 0;
     margin: 0;
     border: 0;
+}
+
+form > fieldset:last-of-type {
+    box-shadow: 3px 2px 2px var(--contrast-color-mode);
 }
 
 .entryBox {
